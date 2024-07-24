@@ -10,7 +10,7 @@ const createArticle = async(req,res) => {
     const author = await User.findById(id).exec();
 
     console.log('article', {body:req.body})
-    const {title, description, body, tagList} = req.body.article;
+    const {title = '', description, body, tagList} = req.body.article;
 
 
 
